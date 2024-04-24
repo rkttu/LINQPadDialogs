@@ -1,6 +1,6 @@
 # LINQPadDialogs
 
-[![NuGet Version](https://img.shields.io/nuget/v/LINQPadDialogs)](https://www.nuget.org/packages/LINQPadDialogs/)
+[![NuGet Version](https://img.shields.io/nuget/v/LINQPadDialogs)](https://www.nuget.org/packages/LINQPadDialogs/) [![GitHub Sponsors](https://img.shields.io/github/sponsors/rkttu)](https://github.com/sponsors/rkttu/)
 
 A helper library that provides the ability to implement interactive user interfaces using LINQPad's built-in Controls.
 
