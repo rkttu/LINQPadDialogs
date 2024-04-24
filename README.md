@@ -15,7 +15,7 @@ A helper library that provides the ability to implement interactive user interfa
 
 I will be gradually developing and supplementing this library.
 
-### Interactivity Features
+### Interactivity Features (Button Array)
 
 It provides a simple async/await method to display multiple buttons, and to see what button the user has selected in the console.
 
@@ -38,6 +38,21 @@ switch (await Dialog.YesNo<string>("Are you happy now?", "yes", "no"))
 		"Answer: ?".Dump();
 		break;
 }
+```
+
+### Interactivity Features (Prompt)
+
+Draw a UI that allows you to type whatever you want into the text box. Unlike `Console.In.ReadLine` methods, this feature shows a text box and OK and Cancel buttons on the screen.
+
+Here is an example of the code:
+
+```csharp
+using LINQPad.Controls;
+
+var answer = await OkCancelPrompt("What's your name?");
+
+if (answer == default) $"You didn't enter a name.".Dump();
+else $"Your name is: {answer}.".Dump();
 ```
 
 ## License
