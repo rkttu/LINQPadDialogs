@@ -7,7 +7,7 @@
 		<authors>rkttu.com</authors>
 		<owners>rkttu.com</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<licenseUrl>https://github.com/rkttu/LINQPadDialogs/blob/main/LICENSEin</licenseUrl>
+		<licenseUrl>https://github.com/rkttu/LINQPadDialogs/blob/main/LICENSE</licenseUrl>
 		<projectUrl>https://github.com/rkttu/LINQPadDialogs</projectUrl>
 		<description>A helper library that provides the ability to implement interactive user interfaces using LINQPad's built-in Controls.</description>
 		<releaseNotes>https://github.com/rkttu/LINQPadDialogs/releases</releaseNotes>
