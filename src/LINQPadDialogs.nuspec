@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>LINQPadDialogs</id>
-		<version>1.0.0</version>
+		<version>0.5.0</version>
 		<title>LINQPad Dialogs</title>
 		<authors>rkttu.com</authors>
 		<owners>rkttu.com</owners>
