@@ -6,6 +6,7 @@ A helper library that provides the ability to implement interactive user interfa
 
 ## Please read before continuing
 
+- This NuGet package is supported by the generosity of community members. A small donation through GitHub Sponsorship will go a long way toward keeping the project running. ([Donate Now](https://github.com/sponsors/rkttu/))
 - This library is intended to be used with LINQPad. It is not recommended for use in production development code.
 - This package also requires a license of at least the Developer Edition of LINQPad to use it.
 - If you write a script using the features provided by this package, it may not be possible to run it with the `lprun` CLI tool.
