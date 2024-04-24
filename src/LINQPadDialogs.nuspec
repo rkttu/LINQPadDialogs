@@ -33,6 +33,7 @@
 	<files>
 		<!-- Documentation -->
 		<file src="..\README.md" target="docs\README.md" />
+		<file src="..\LICENSE" target="docs\LICENSE" />
 
 		<!-- LINQPad 5 -->
 		<file src="LINQPadDialog.LP5\bin\Release\LINQPadDialog.dll" target="lib\net461\LINQPadDialog.dll" />
