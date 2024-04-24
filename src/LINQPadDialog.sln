@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQPadDialog.LP8", "LINQPadDialog.LP8\LINQPadDialog.LP8.csproj", "{2D5783BB-D24F-4F3B-8C73-26364026A8C7}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LINQPadDialog.Shared", "LINQPadDialog.Shared\LINQPadDialog.Shared.shproj", "{BA2F946A-BF4C-40BB-904E-D1DB3C4C7C7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQPadDialog.LP7", "LINQPadDialog.LP7\LINQPadDialog.LP7.csproj", "{59F3850E-1DFD-4A0B-B71A-66F05C38390F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQPadDialog.LP5", "LINQPadDialog.LP5\LINQPadDialog.LP5.csproj", "{9DC3D08E-082C-4670-953B-587263A3053E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQPadDialog.LP6", "LINQPadDialog.LP6\LINQPadDialog.LP6.csproj", "{A700B5B4-14C2-4C68-AE02-393DB110D27F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQPadDialog.Resources", "LINQPadDialog.Resources\LINQPadDialog.Resources.csproj", "{45DF2DD5-38C3-41AB-A71C-FEBB738507F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D5783BB-D24F-4F3B-8C73-26364026A8C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D5783BB-D24F-4F3B-8C73-26364026A8C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D5783BB-D24F-4F3B-8C73-26364026A8C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D5783BB-D24F-4F3B-8C73-26364026A8C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59F3850E-1DFD-4A0B-B71A-66F05C38390F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F3850E-1DFD-4A0B-B71A-66F05C38390F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F3850E-1DFD-4A0B-B71A-66F05C38390F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F3850E-1DFD-4A0B-B71A-66F05C38390F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DC3D08E-082C-4670-953B-587263A3053E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DC3D08E-082C-4670-953B-587263A3053E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DC3D08E-082C-4670-953B-587263A3053E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DC3D08E-082C-4670-953B-587263A3053E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A700B5B4-14C2-4C68-AE02-393DB110D27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A700B5B4-14C2-4C68-AE02-393DB110D27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A700B5B4-14C2-4C68-AE02-393DB110D27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A700B5B4-14C2-4C68-AE02-393DB110D27F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45DF2DD5-38C3-41AB-A71C-FEBB738507F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45DF2DD5-38C3-41AB-A71C-FEBB738507F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45DF2DD5-38C3-41AB-A71C-FEBB738507F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45DF2DD5-38C3-41AB-A71C-FEBB738507F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD931A95-64E3-4A33-B516-0F90897A6130}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		LINQPadDialog.Shared\LINQPadDialog.Shared.projitems*{2d5783bb-d24f-4f3b-8c73-26364026a8c7}*SharedItemsImports = 5
+		LINQPadDialog.Shared\LINQPadDialog.Shared.projitems*{59f3850e-1dfd-4a0b-b71a-66f05c38390f}*SharedItemsImports = 5
+		LINQPadDialog.Shared\LINQPadDialog.Shared.projitems*{9dc3d08e-082c-4670-953b-587263a3053e}*SharedItemsImports = 4
+		LINQPadDialog.Shared\LINQPadDialog.Shared.projitems*{a700b5b4-14c2-4c68-ae02-393db110d27f}*SharedItemsImports = 5
+		LINQPadDialog.Shared\LINQPadDialog.Shared.projitems*{ba2f946a-bf4c-40bb-904e-d1db3c4c7c7c}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

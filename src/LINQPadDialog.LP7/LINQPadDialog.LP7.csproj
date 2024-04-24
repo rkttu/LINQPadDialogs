@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+    <Nullable>enable</Nullable>
+    <RootNamespace>LINQPad.Controls</RootNamespace>
+    <AssemblyName>LINQPadDialog</AssemblyName>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<Title>LINQPadDialog</Title>
+	<Description>A helper library that provides the ability to implement interactive user interfaces using LINQPad's built-in Controls.</Description>
+	<Copyright>rkttu.com</Copyright>
+	<RepositoryUrl>https://github.com/rkttu/LINQPadDialogs</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PackageTags>LINQPadDialog;LINQPad</PackageTags>
+	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	<IncludeSymbols>False</IncludeSymbols>
+  </PropertyGroup>
+
+  <Import Project="..\LINQPadDialog.Shared\LINQPadDialog.Shared.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LINQPad.Runtime" Version="7.8.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LINQPadDialog.Resources\LINQPadDialog.Resources.csproj" />
+  </ItemGroup>
+
+</Project>
