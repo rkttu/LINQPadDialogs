@@ -15,6 +15,20 @@
 		<releaseNotes>https://github.com/rkttu/LINQPadDialogs/releases</releaseNotes>
 		<copyright>(c) 2024 rkttu.com, All rights reserved.</copyright>
 		<tags>linqpad dialogs</tags>
+		<dependencies>
+			<group targetFramework=".NETFramework4.6.1">
+				<dependency id="LINQPad" version="5.46.0" />
+			</group>
+			<group targetFramework="netcoreapp3.0">
+				<dependency id="LINQPad.Runtime" version="6.14.10" />
+			</group>
+			<group targetFramework="netcoreapp3.1">
+				<dependency id="LINQPad.Runtime" version="7.8.7" />
+			</group>
+			<group targetFramework="net6.0">
+				<dependency id="LINQPad.Runtime" version="8.3.7" />
+			</group>
+		</dependencies>
 	</metadata>
 	<files>
 		<!-- Documentation -->
