@@ -7,14 +7,19 @@
 		<authors>rkttu.com</authors>
 		<owners>rkttu.com</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<licenseUrl>https://github.com/rkttu/LINQPadDialogs/blob/main/LICENSE</licenseUrl>
+		<license type="expression">Apache-2.0</license>
+		<readme>docs\README.md</readme>
 		<projectUrl>https://github.com/rkttu/LINQPadDialogs</projectUrl>
+		<repository type="git" url="https://github.com/rkttu/LINQPadDialogs.git" branch="main" />
 		<description>A helper library that provides the ability to implement interactive user interfaces using LINQPad's built-in Controls.</description>
 		<releaseNotes>https://github.com/rkttu/LINQPadDialogs/releases</releaseNotes>
 		<copyright>(c) 2024 rkttu.com, All rights reserved.</copyright>
 		<tags>linqpad dialogs</tags>
 	</metadata>
 	<files>
+		<!-- Documentation -->
+		<file src="..\README.md" target="docs\README.md" />
+
 		<!-- LINQPad 5 -->
 		<file src="LINQPadDialog.LP5\bin\Release\LINQPadDialog.dll" target="lib\net461\LINQPadDialog.dll" />
 		<file src="LINQPadDialog.LP5\bin\Release\LINQPadDialog.pdb" target="lib\net461\LINQPadDialog.pdb" />

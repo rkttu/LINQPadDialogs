@@ -15,6 +15,8 @@ If needed, you can customize the `ButtonArray` types that are added to the `LINQ
 Here is an example of the code:
 
 ```csharp
+using LINQPad.Controls;
+
 switch (await Dialog.YesNo<string>("Are you happy now?", "yes", "no"))
 {
 	case "yes":
@@ -28,6 +30,10 @@ switch (await Dialog.YesNo<string>("Are you happy now?", "yes", "no"))
 		break;
 }
 ```
+
+## Caveats
+
+If you write a script using the features provided by this package, it may not be possible to run it with the `lprun` CLI tool.
 
 ## License
 
