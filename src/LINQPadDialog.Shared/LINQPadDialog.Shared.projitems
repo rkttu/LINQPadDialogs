@@ -12,5 +12,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ButtonArray.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dialog.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DialogExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Prompt.cs" />
   </ItemGroup>
 </Project>

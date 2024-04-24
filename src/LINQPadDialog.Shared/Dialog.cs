@@ -59,5 +59,22 @@ namespace LINQPad.Controls
             new YesNoCancelButtonArray(_ => tcs.SetResult(yesValue), _ => tcs.SetResult(noValue), _ => tcs.SetResult(cancelValue)).Dump(question);
             return await tcs.Task;
         }
+
+        public static async Task<string> OkPrompt(string question, string initialText = "")
+        {
+            var tcs = new TaskCompletionSource<string>(default);
+            new OkPrompt(initialText,
+                textBox => tcs.SetResult(textBox.Text)).Dump(question);
+            return await tcs.Task;
+        }
+
+        public static async Task<string?> OkCancelPrompt(string question, string initialText = "")
+        {
+            var tcs = new TaskCompletionSource<string?>(default);
+            new OkCancelPrompt(initialText,
+                textBox => tcs.SetResult(textBox.Text),
+                textBox => tcs.SetResult(default)).Dump(question);
+            return await tcs.Task;
+        }
     }
 }
