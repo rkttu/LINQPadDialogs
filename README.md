@@ -4,6 +4,10 @@
 
 A helper library that provides the ability to implement interactive user interfaces using LINQPad's built-in Controls.
 
+LINQPad 8 | LINQPad 5
+:--------:| :--------:
+![As used in LINQPad 8](docs/images/linqpad8.png) | ![As used in LINQPad 5](docs/images/linqpad5.png)
+
 ## Please read before continuing
 
 - This NuGet package is supported by the generosity of community members. A small donation through GitHub Sponsorship will go a long way toward keeping the project running. ([Donate Now](https://github.com/sponsors/rkttu/))
