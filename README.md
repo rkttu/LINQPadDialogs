@@ -1,6 +1,14 @@
 # LINQPadDialogs
 
+[![NuGet Version](https://img.shields.io/nuget/v/LINQPadDialogs)](https://www.nuget.org/packages/LINQPadDialogs/)
+
 A helper library that provides the ability to implement interactive user interfaces using LINQPad's built-in Controls.
+
+## Please read before continuing
+
+- This library is intended to be used with LINQPad. It is not recommended for use in production development code.
+- This package also requires a license of at least the Developer Edition of LINQPad to use it.
+- If you write a script using the features provided by this package, it may not be possible to run it with the `lprun` CLI tool.
 
 ## Features
 
@@ -30,10 +38,6 @@ switch (await Dialog.YesNo<string>("Are you happy now?", "yes", "no"))
 		break;
 }
 ```
-
-## Caveats
-
-If you write a script using the features provided by this package, it may not be possible to run it with the `lprun` CLI tool.
 
 ## License
 
