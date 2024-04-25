@@ -32,6 +32,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <LangVersion>9.0</LangVersion>
     <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>bin\Release\LINQPadDialog.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LINQPad, Version=1.0.0.0, Culture=neutral, PublicKeyToken=21353812cd2a2db5, processorArchitecture=MSIL">
