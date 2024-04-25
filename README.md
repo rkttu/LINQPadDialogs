@@ -59,6 +59,20 @@ if (answer == default) $"You didn't enter a name.".Dump();
 else $"Your name is: {answer}.".Dump();
 ```
 
+You can also use the Choose or Multiple Choice prompts here.
+
+```csharp
+using LINQPad.Controls;
+
+// Single Choice
+var answer = await Extensions.SelectOneAnswerPrompt("What's your favorite fruit?", default, "Apple", "Banana", "Kiwi", "Peach", "Watermelon");
+$"Your favorite food is: {answer}".Dump();
+
+// Multiple Choices
+var answers = await Extensions.SelectMultipleAnswersPrompt("What's your favorite foods?", default, "Bulgogi", "Kimbap", "Ramen", "Kimchi Jjigae");
+$"Your favorite foods are: {string.Join(", ", answers)}".Dump();
+```
+
 ## License
 
 This project is licensed under the [Apache License 2.0](./LICENSE).

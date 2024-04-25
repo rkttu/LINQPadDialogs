@@ -1,5 +1,8 @@
 ﻿#nullable enable
 
+using System.Collections.Generic;
+using System.Linq;
+using System;
 using System.Threading.Tasks;
 
 namespace LINQPad.Controls
@@ -77,6 +80,29 @@ namespace LINQPad.Controls
                 textBox => tcs.SetResult(textBox.Text),
                 textBox => tcs.SetResult(default)).Dump(question);
             return await tcs.Task;
+        }
+
+        public static async Task<string?> SelectOneAnswerPrompt(string question, Action<RadioButton>? optionCallback = default, string? defaultValue = default, params string[] options)
+        {
+            var tcs = new TaskCompletionSource();
+            var prompt = new SelectOneAnswerPrompt(
+                optionCallback,
+                _ => tcs.SetResult(),
+                defaultValue,
+                options).Dump(question);
+            await tcs.Task.ConfigureAwait(false);
+            return prompt.GetSelectedRadioButton()?.Text;
+        }
+
+        public static async Task<IEnumerable<string>> SelectMultipleAnswersPrompt(string question, Action<CheckBox>? optionCallback = default, params string[] options)
+        {
+            var tcs = new TaskCompletionSource();
+            var prompt = new SelectMultipleAnswersPrompt(
+                optionCallback,
+                _ => tcs.SetResult(),
+                options).Dump(question);
+            await tcs.Task.ConfigureAwait(false);
+            return prompt.GetSelectedCheckBoxes().Select(x => x.Text);
         }
     }
 }
