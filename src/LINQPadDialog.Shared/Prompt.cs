@@ -4,9 +4,45 @@ using LINQPad.Controls.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace LINQPad.Controls
 {
+    /// <summary>
+    /// Represents a prompt dialog with a password input field and an OK button.
+    /// </summary>
+    public class PasswordPrompt : Div
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PasswordPrompt"/> class.
+        /// </summary>
+        /// <param name="initialText">The initial text for the password input field.</param>
+        /// <param name="okCallback">The callback action to be invoked when the OK button is clicked.</param>
+        public PasswordPrompt(string initialText = "", Action<PasswordBox>? okCallback = default)
+        {
+            _passwordBox = new PasswordBox(initialText: initialText);
+            _okButton = new Button(UIStringResources.Button_OK, (button) => okCallback?.Invoke(_passwordBox));
+            this.Children.Add(_passwordBox);
+            this.Children.Add(new StackPanel(true, _okButton));
+        }
+
+        private readonly PasswordBox _passwordBox = default!;
+        private readonly Button _okButton = default!;
+
+        /// <summary>
+        /// Gets the raw password entered in the password input field.
+        /// </summary>
+        /// <returns>The raw password.</returns>
+        public string GetRawPassword() => _passwordBox.Text;
+
+        /// <summary>
+        /// Gets the encoded password entered in the password input field using the specified encoding.
+        /// </summary>
+        /// <param name="targetEncoding">The encoding to use for encoding the password.</param>
+        /// <returns>The encoded password as a byte array.</returns>
+        public byte[] GetEncodedPassword(Encoding targetEncoding) => targetEncoding.GetBytes(_passwordBox.Text);
+    }
+
     /// <summary>
     /// Represents a prompt dialog with an OK button.
     /// </summary>

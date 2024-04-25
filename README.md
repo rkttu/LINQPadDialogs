@@ -6,7 +6,7 @@ A helper library that provides the ability to implement interactive user interfa
 
 LINQPad 8 | LINQPad 5
 :--------:| :--------:
-![As used in LINQPad 8](docs/images/linqpad8.png) | ![As used in LINQPad 5](docs/images/linqpad5.png)
+![As used in LINQPad 8](https://raw.githubusercontent.com/rkttu/LINQPadDialogs/main/docs/images/linqpad8.png) | ![As used in LINQPad 5](https://raw.githubusercontent.com/rkttu/LINQPadDialogs/main/docs/images/linqpad5.png)
 
 ## Please read before continuing
 
@@ -59,18 +59,27 @@ if (answer == default) $"You didn't enter a name.".Dump();
 else $"Your name is: {answer}.".Dump();
 ```
 
-You can also use the Choose or Multiple Choice prompts here.
+You can use the Choose or Multiple Choice prompts here.
 
 ```csharp
 using LINQPad.Controls;
 
 // Single Choice
-var answer = await Extensions.SelectOneAnswerPrompt("What's your favorite fruit?", default, "Apple", "Banana", "Kiwi", "Peach", "Watermelon");
+var answer = await Dialog.SelectOneAnswerPrompt("What's your favorite fruit?", default, "Apple", "Banana", "Kiwi", "Peach", "Watermelon");
 $"Your favorite food is: {answer}".Dump();
 
 // Multiple Choices
-var answers = await Extensions.SelectMultipleAnswersPrompt("What's your favorite foods?", default, "Bulgogi", "Kimbap", "Ramen", "Kimchi Jjigae");
+var answers = await Dialog.SelectMultipleAnswersPrompt("What's your favorite foods?", default, "Bulgogi", "Kimbap", "Ramen", "Kimchi Jjigae");
 $"Your favorite foods are: {string.Join(", ", answers)}".Dump();
+```
+
+The ability to enter a password is also available.
+
+```csharp
+using LINQPad.Controls;
+
+var password = await Dialog.PasswordPrompt("Enter your password");
+var encodedPassword = await Dialog.PasswordPromptAsBytes("Enter your password again", new UTF8Encoding(false));
 ```
 
 ## License

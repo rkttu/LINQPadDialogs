@@ -18,6 +18,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루션 항목", "{BC6D5D0B-B0EB-42BD-9A63-553FC661A67B}"
 	ProjectSection(SolutionItems) = preProject
 		LINQPadDialogs.nuspec = LINQPadDialogs.nuspec
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Global

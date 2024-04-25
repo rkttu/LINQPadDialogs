@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace LINQPad.Controls
@@ -157,6 +158,37 @@ namespace LINQPad.Controls
                 textBox => tcs.SetResult(textBox.Text),
                 textBox => tcs.SetResult(default)).Dump(question);
             return await tcs.Task;
+        }
+
+        /// <summary>
+        /// Displays a dialog box with a prompt for entering a password and returns the entered password as a string.
+        /// </summary>
+        /// <param name="question">The question to display in the dialog box.</param>
+        /// <param name="initialText">The initial text to display in the password field.</param>
+        /// <returns>The entered password as a string.</returns>
+        public static async Task<string?> PasswordPrompt(string question, string initialText = "")
+        {
+            var tcs = new TaskCompletionSource<object?>();
+            var prompt = new PasswordPrompt(initialText,
+                pwdBox => tcs.SetResult(default)).Dump(question);
+            await tcs.Task.ConfigureAwait(false);
+            return prompt.GetRawPassword();
+        }
+
+        /// <summary>
+        /// Displays a dialog box with a prompt for entering a password and returns the entered password as a byte array encoded with the specified encoding.
+        /// </summary>
+        /// <param name="question">The question to display in the dialog box.</param>
+        /// <param name="targetEncoding">The encoding to use for encoding the password as a byte array.</param>
+        /// <param name="initialText">The initial text to display in the password field.</param>
+        /// <returns>The entered password as a byte array encoded with the specified encoding.</returns>
+        public static async Task<byte[]?> PasswordPromptAsBytes(string question, Encoding targetEncoding, string initialText = "")
+        {
+            var tcs = new TaskCompletionSource<object?>();
+            var prompt = new PasswordPrompt(initialText,
+                pwdBox => tcs.SetResult(default)).Dump(question);
+            await tcs.Task.ConfigureAwait(false);
+            return prompt.GetEncodedPassword(targetEncoding);
         }
 
         /// <summary>
