@@ -70,7 +70,7 @@ namespace LINQPad.Controls
         {
             var groupName = Guid.NewGuid().ToString("n");
             _radioButtons = options.Select(x => new RadioButton(groupName, x, string.Equals(x, defaultValue), optionCallback)).ToArray();
-            _submitButton = new Button("Select", submitButtonCallback);
+            _submitButton = new Button(UIStringResources.Button_Select, submitButtonCallback);
             _stackPanel = new StackPanel(false, _radioButtons);
             _stackPanel.Children.Add(_submitButton);
             this.Children.Add(_stackPanel);
@@ -101,7 +101,7 @@ namespace LINQPad.Controls
         public SelectMultipleAnswersPrompt(Action<CheckBox>? optionCallback = default, Action<Button>? submitButtonCallback = default, params string[] options)
         {
             _checkBoxes = options.Select(x => new CheckBox(x, false, optionCallback)).ToArray();
-            _submitButton = new Button("Select", submitButtonCallback);
+            _submitButton = new Button(UIStringResources.Button_Select, submitButtonCallback);
             _stackPanel = new StackPanel(false, _checkBoxes);
             _stackPanel.Children.Add(_submitButton);
             this.Children.Add(_stackPanel);

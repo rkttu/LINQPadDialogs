@@ -124,6 +124,15 @@ namespace LINQPad.Controls.Resources {
         }
         
         /// <summary>
+        ///   Select과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string Button_Select {
+            get {
+                return ResourceManager.GetString("Button_Select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Try과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string Button_Try {
