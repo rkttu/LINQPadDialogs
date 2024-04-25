@@ -9,9 +9,36 @@ using System.Text;
 namespace LINQPad.Controls
 {
     /// <summary>
+    /// Represents a base class for prompt dialogs.
+    /// </summary>
+    public abstract class PromptBase : Div
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PromptBase"/> class with the specified children.
+        /// </summary>
+        /// <param name="children">The children controls of the prompt.</param>
+        public PromptBase(IEnumerable<Control> children) : base(children) { }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PromptBase"/> class.
+        /// </summary>
+        public PromptBase() : base() { }
+
+        /// <summary>
+        /// Overrides the <see cref="Div.OnRendering"/> method to set focus on the first child control.
+        /// </summary>
+        /// <param name="e">The <see cref="EventArgs"/> object that contains the event data.</param>
+        protected override void OnRendering(EventArgs e)
+        {
+            this.Children.FirstOrDefault()?.Focus();
+            base.OnRendering(e);
+        }
+    }
+
+    /// <summary>
     /// Represents a prompt dialog with a password input field and an OK button.
     /// </summary>
-    public class PasswordPrompt : Div
+    public class PasswordPrompt : PromptBase
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PasswordPrompt"/> class.
@@ -46,7 +73,7 @@ namespace LINQPad.Controls
     /// <summary>
     /// Represents a prompt dialog with an OK button.
     /// </summary>
-    public class OKPrompt : Div
+    public class OKPrompt : PromptBase
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OKPrompt"/> class.
@@ -68,7 +95,7 @@ namespace LINQPad.Controls
     /// <summary>
     /// Represents a prompt dialog with an OK and Cancel button.
     /// </summary>
-    public class OKCancelPrompt : Div
+    public class OKCancelPrompt : PromptBase
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OKCancelPrompt"/> class.
@@ -93,7 +120,7 @@ namespace LINQPad.Controls
     /// <summary>
     /// Represents a prompt dialog with a set of radio buttons for selecting one answer.
     /// </summary>
-    public class SelectOneAnswerPrompt : Div
+    public class SelectOneAnswerPrompt : PromptBase
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SelectOneAnswerPrompt"/> class.
@@ -126,7 +153,7 @@ namespace LINQPad.Controls
     /// <summary>
     /// Represents a prompt dialog with a set of checkboxes for selecting multiple answers.
     /// </summary>
-    public class SelectMultipleAnswersPrompt : Div
+    public class SelectMultipleAnswersPrompt : PromptBase
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SelectMultipleAnswersPrompt"/> class.
