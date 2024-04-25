@@ -7,10 +7,8 @@ namespace LINQPad.Controls
 {
     public abstract class ButtonArray : Div
     {
-        private static readonly string ButtonSeparator = " ";
-
         public ButtonArray(params Button[] buttons) :
-            base(buttons.JoinControls(new Label(ButtonSeparator)))
+            base(new StackPanel(true, buttons))
         { }
     }
 
