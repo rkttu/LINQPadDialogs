@@ -53,7 +53,7 @@ Here is an example of the code:
 ```csharp
 using LINQPad.Controls;
 
-var answer = await OkCancelPrompt("What's your name?");
+var answer = await OKCancelPrompt("What's your name?");
 
 if (answer == default) $"You didn't enter a name.".Dump();
 else $"Your name is: {answer}.".Dump();

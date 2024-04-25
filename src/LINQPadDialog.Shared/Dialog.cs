@@ -62,18 +62,18 @@ namespace LINQPad.Controls
             return await tcs.Task;
         }
 
-        public static async Task<string> OkPrompt(string question, string initialText = "")
+        public static async Task<string> OKPrompt(string question, string initialText = "")
         {
             var tcs = new TaskCompletionSource<string>(default);
-            new OkPrompt(initialText,
+            new OKPrompt(initialText,
                 textBox => tcs.SetResult(textBox.Text)).Dump(question);
             return await tcs.Task;
         }
 
-        public static async Task<string?> OkCancelPrompt(string question, string initialText = "")
+        public static async Task<string?> OKCancelPrompt(string question, string initialText = "")
         {
             var tcs = new TaskCompletionSource<string?>(default);
-            new OkCancelPrompt(initialText,
+            new OKCancelPrompt(initialText,
                 textBox => tcs.SetResult(textBox.Text),
                 textBox => tcs.SetResult(default)).Dump(question);
             return await tcs.Task;

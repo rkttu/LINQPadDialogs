@@ -8,9 +8,9 @@ using System.Text;
 
 namespace LINQPad.Controls
 {
-    public class OkPrompt : Div
+    public class OKPrompt : Div
     {
-        public OkPrompt(string initialText = "", Action<TextBox>? okCallback = default)
+        public OKPrompt(string initialText = "", Action<TextBox>? okCallback = default)
         {
             _textBox = new TextBox(initialText: initialText);
             _okButton = new Button(UIStringResources.Button_OK, (button) => okCallback?.Invoke(_textBox));
@@ -22,9 +22,9 @@ namespace LINQPad.Controls
         private readonly Button _okButton = default!;
     }
 
-    public class OkCancelPrompt : Div
+    public class OKCancelPrompt : Div
     {
-        public OkCancelPrompt(string initialText = "", Action<TextBox>? okCallback = default, Action<TextBox>? cancelCallback = default)
+        public OKCancelPrompt(string initialText = "", Action<TextBox>? okCallback = default, Action<TextBox>? cancelCallback = default)
         {
             _textBox = new TextBox(initialText: initialText);
             _okButton = new Button(UIStringResources.Button_OK, (button) => okCallback?.Invoke(_textBox));
